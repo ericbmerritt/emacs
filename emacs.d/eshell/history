@@ -1,0 +1,128 @@
+cd Internal/
+ls
+cat Primitives.hs 
+cd ..
+cd ..
+cd ..
+cd Platform/Internal/
+ls
+git rm -rf Primitives.hs 
+git rm -f Primitives.hs 
+git status
+cd ..
+cd ..
+cd
+cd workspace/distributed-process-platform/src/Control/Distributed/
+ls
+cd Process/
+cd ..
+cd ..
+cd ..
+cd ..
+emacs  distributed-process-platform.cabal 
+ls
+cd src/
+ls
+cd Control/
+ls
+cd Distributed/
+ls
+cd Process/
+ls
+emacs Platform.hs
+emacs Platform.hs
+cd ..
+cd Process/Platform/
+ls
+emacs *
+ls
+cd ..
+cd ..
+ls
+cd ..
+cd ..
+cd ..
+emacs distributed-process-platform.cabal 
+make configure
+make
+emacs distributed-process-platform.cabal 
+emacs distributed-process-platform.cabal 
+cabal --configure --enable-tests
+cabal configure --enable-tests
+cabal build
+emacs distributed-process-platform.cabal 
+emacs distributed-process-platform.cabal
+cabal build
+cd ../distributed-process/
+ls
+emacs *.cabal
+cd distributed-process/
+emacs *.cabal
+cabal configure
+emacs distributed-process.cabal
+cabal configure --enable-tests
+cabal build
+cd ..
+ls
+cd ../five9/
+ls
+cd f9_utils/
+cd src/
+emacs f9_utils_marshaller.erl 
+git push origin --mirror
+cd ..
+cd ..
+cd f9_dmt/
+git remote show
+git fetch klastochkin
+git branch
+git reset --hard klastochkin/develop
+make rebuild
+ls
+cd ..
+cd ..
+cd erlcron/
+cd src/
+ls
+emacs erlcron.app.src 
+ls
+cat erlcron.app.src
+ls
+cd ../../five9/
+ls
+cd router_svc/src/
+ls
+emacs router_svc_sup.erl
+cd workspace/projmake-mode/
+ls
+cd ..
+cp -r projmake-mode projmake-mode-0.0.1
+cat projmake-mode/projmake-mode-pkg.el
+mv projmake-mode-0.0.1 projmake-mode-0.0.3
+tar -czh projmake-mode-0.0.3 > projmake-mode-0.0.3.tar
+cd melpa/recipes/
+emacs projmake-mode
+cd ..
+cd ..
+exit
+cd five9/f9_gen_service/
+git fetch canonical
+ls
+git branch
+git checkout -b develop canonical/develop
+git log -3
+ls
+cd src/
+ls
+emacs f9_gen_service.erl
+emcas f9_gs_utils.erl 
+emacs f9_gs_utils.erl 
+cd ..
+make distclean
+ls
+cd src/
+ls
+cd ..
+make rebuild
+ls
+emacs projmake-util.el 
