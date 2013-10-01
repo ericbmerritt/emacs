@@ -1,43 +1,3 @@
-cd Internal/
-ls
-cat Primitives.hs 
-cd ..
-cd ..
-cd ..
-cd Platform/Internal/
-ls
-git rm -rf Primitives.hs 
-git rm -f Primitives.hs 
-git status
-cd ..
-cd ..
-cd
-cd workspace/distributed-process-platform/src/Control/Distributed/
-ls
-cd Process/
-cd ..
-cd ..
-cd ..
-cd ..
-emacs  distributed-process-platform.cabal 
-ls
-cd src/
-ls
-cd Control/
-ls
-cd Distributed/
-ls
-cd Process/
-ls
-emacs Platform.hs
-emacs Platform.hs
-cd ..
-cd Process/Platform/
-ls
-emacs *
-ls
-cd ..
-cd ..
 ls
 cd ..
 cd ..
@@ -126,3 +86,43 @@ cd ..
 make rebuild
 ls
 emacs projmake-util.el 
+cd sr
+cd en/
+ls
+mv 05-types.md 06-types.md
+mv 08-anonymous-functions.md 07-anonymous-functions.md
+mv 09-message-passing.md 08-message-passing.md
+ls
+cd ..
+make 
+make 
+emc Makefile 
+emacs Makefile 
+make
+make
+rm en/idiomatic_erlang.adoc 
+make
+ls
+open idiomatic-erlang-en.pdf 
+make
+open idiomatic-erlang-en.pdf 
+make
+open idiomatic-erlang-en.pdf 
+make
+open idiomatic-erlang-en.pdf 
+make
+open idiomatic-erlang-en.pdf 
+make epub
+make epub
+make epub
+ls
+rm idiomatic-erlang-en.pdf 
+ls output/
+emacs .gitignore
+git status
+git init
+git status
+git add .gitignore Makefile TODO.md en/
+git status
+emacs LICENSE.md
+emacs LICENSE.md 

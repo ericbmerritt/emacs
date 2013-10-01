@@ -1,6 +1,3 @@
-/Users/emerrit/workspace/five9/router_client/deps
-/Users/emerrit/workspace/five9/router_client/test
-/Users/emerrit/workspace/five9/router_client
 /Users/emerrit/workspace/five9/agent_client
 /Users/emerrit/workspace/distributed-process-platform/src/Control/Distributed/Platform
 /Users/emerrit/workspace/distributed-process-platform/src/Control/Distributed/Process/Platform/Internal
@@ -31,3 +28,6 @@
 /Users/emerrit/workspace/five9/f9_gen_service
 ~
 ~/workspace/projmake-mode
+~/workspace/idiomatic_erlang
+/Users/emerrit/workspace/idiomatic_erlang/en
+/Users/emerrit/workspace/idiomatic_erlang

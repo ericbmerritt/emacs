@@ -25,6 +25,7 @@
   (modify-syntax-entry ?\} "){"))
 
 (add-hook 'joxa-mode-hook '(lambda ()
+                             (require 'projmake-mode)
                              (paredit-mode)
                              (require 'parenface)
                              (projmake-mode)
@@ -33,7 +34,6 @@
 
  (add-to-list 'auto-mode-alist '("\\.jxa\\'" . joxa-mode))
 
-(require 'projmake-mode)
 
 (custom-set-faces
  '(projmake-errline ((t (:foreground "#dc322f" :bold t :slant normal))))
