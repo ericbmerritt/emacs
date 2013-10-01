@@ -4,11 +4,19 @@
 
 (defvar erlang-root-dir "/usr/local/lib/erlang/")
 
-(setq load-path (cons  (concat (file-name-as-directory erlang-root-dir)
-                               "lib/tools-2.6.8/emacs")
-                       load-path))
+(defun get-erlang-tools-dir (root-dir)
+  (let* ((lib-dir (expand-file-name "lib" root-dir))
+         (tools-dir (first (sort (directory-files lib-dir nil "^tools-.+")
+                                 'string<))))
+    (expand-file-name tools-dir lib-dir)))
 
-(require 'projmake-mode)
+
+(defun set-erlang-tools-path (root-dir)
+  (let ((tools-dir (expand-file-name "emacs" (get-erlang-tools-dir root-dir))))
+    (setq load-path (cons  tools-dir load-path))))
+
+(set-erlang-tools-path erlang-root-dir)
+
 (require 'erlang-start)
 
 ;;
@@ -18,6 +26,7 @@
 (distel-setup)
 
 (defun my-erlang-mode-hook ()
+  (require 'projmake-mode)
   (projmake-mode)
   (projmake-search-load-project)
   (setq erlang-indent-level 4)
