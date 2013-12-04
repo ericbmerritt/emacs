@@ -22,8 +22,8 @@
 ;;
 ;; Setup Distel
 ;;
-(require 'distel)
-(distel-setup)
+;(require 'distel)
+;(distel-setup)
 
 (defun my-erlang-mode-hook ()
   (require 'projmake-mode)

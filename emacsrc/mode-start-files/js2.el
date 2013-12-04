@@ -1,4 +1,5 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 (defadvice js2-reparse (before json)
         (setq js2-buffer-file-name buffer-file-name))
@@ -26,3 +27,10 @@
     (shell-command-on-region b e
      "python -mjson.tool" (current-buffer) t)))
 
+(defun my-js2-mode-hook ()
+  (require 'projmake-mode)
+  (projmake-mode)
+  (projmake-search-load-project)
+  (flyspell-prog-mode))
+
+(add-hook 'js2-mode-hook 'my-js2-mode-hook)
