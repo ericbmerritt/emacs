@@ -6,6 +6,4 @@
 (global-set-key "\C-c\C-k" 'kill-region)
 (global-set-key [f5] 'call-last-kbd-macro)
 (global-set-key (kbd "\C-c \C-g") 'goto-line)
-
-
 (global-set-key "\C-z"  'c-null)     ; Ctrl-z bad, mkay?

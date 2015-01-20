@@ -18,8 +18,8 @@
 
 ;;; buffer switching stuff
 ;(iswitchb-default-keybindings)  Show me my completions please
-(iswitchb-mode 1)              ; Show me my completions please
-(setq iswitchb-case nil) ; completions are case sensitive.
+;(iswitchb-mode 1)              ; Show me my completions please
+;(setq iswitchb-case nil) ; completions are case sensitive.
 
 
 ;; File Manipulation stuff
