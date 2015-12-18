@@ -62,8 +62,8 @@
 ;; Delete trailing whitespace
 (add-hook 'write-file-functions 'delete-trailing-whitespace)
 
-(setenv "PAGER" "/bin/cat")
-(setenv "EDITOR" "/usr/bin/emacsclient") ; `which emacsclient`
+(setenv "PAGER" "/run/current-system/sw/bin/cat")
+(setenv "EDITOR" "/run/current-system/sw/bin/emacsclient") ; `which emacsclient`
 
 (put 'set-goal-column 'disabled nil)
 

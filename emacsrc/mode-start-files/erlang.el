@@ -2,7 +2,7 @@
 (add-mode-path "/distel/elisp")
 (add-mode-path "/company-distel")
 
-(defvar erlang-root-dir "/usr/local/lib/erlang/")
+(defvar erlang-root-dir "/run/current-system/sw/lib/erlang/")
 
 (defun get-erlang-tools-dir (root-dir)
   (let* ((lib-dir (expand-file-name "lib" root-dir))
