@@ -56,6 +56,14 @@ Provide the following keybindings:
   :type 'string
   :safe #'stringp)
 
+(defcustom hindent-line-length
+  80
+  "The line length the use when formating."
+  :group 'haskell
+  :type 'integer
+  :safe #'integerp)
+
+
 (defcustom hindent-process-path
   "hindent"
   "Location where the hindent executable is located."
@@ -147,8 +155,11 @@ This is the place where hindent is actually called."
                                           nil
                                           "--pure"
                                           "--run"
-                                          (format "%s --style %s"
-                                                  '(hindent-process-path hindent-style)))
+                                          (format "%s --style %s --line-length %s"
+                                                  hindent-process-path
+                                                  hindent-style
+                                                  hindent-line-length)
+                                          (nix-current-sandbox))
                                     (hindent-extra-arguments)))))
             (cond
              ((= ret 1)
