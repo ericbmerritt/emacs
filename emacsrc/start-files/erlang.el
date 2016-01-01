@@ -1,6 +1,4 @@
-(add-mode-path "/projmake-mode")
 (add-mode-path "/distel/elisp")
-(add-mode-path "/company-distel")
 
 (defvar erlang-root-dir "/run/current-system/sw/lib/erlang/")
 
@@ -19,16 +17,7 @@
 
 (require 'erlang-start)
 
-;;
-;; Setup Distel
-;;
-;(require 'distel)
-;(distel-setup)
-
 (defun my-erlang-mode-hook ()
-;  (require 'projmake-mode)
-;  (projmake-mode)
-;  (projmake-search-load-project)
   (setq erlang-indent-level 4)
   (setq inferior-erlang-machine-options '("-sname" "emacs"))
   (flyspell-prog-mode))
@@ -37,8 +26,8 @@
 
 ;; Setup the metadata files to open in erlang mode as well
 
- (add-to-list 'auto-mode-alist '("\\.app$" . erlang-mode))
- (add-to-list 'auto-mode-alist '("\\.app.src$" . erlang-mode))
- (add-to-list 'auto-mode-alist '("\\.rel$" . erlang-mode))
- (add-to-list 'auto-mode-alist '("rebar.config" . erlang-mode))
- (add-to-list 'auto-mode-alist '("relx.config" . erlang-mode))
+(add-to-list 'auto-mode-alist '("\\.app$" . erlang-mode))
+(add-to-list 'auto-mode-alist '("\\.app.src$" . erlang-mode))
+(add-to-list 'auto-mode-alist '("\\.rel$" . erlang-mode))
+(add-to-list 'auto-mode-alist '("rebar.config" . erlang-mode))
+(add-to-list 'auto-mode-alist '("relx.config" . erlang-mode))
