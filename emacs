@@ -21,9 +21,12 @@
 (setq *mode-root* (expand-file-name "~/.emacsrc/modes"))
 (setq *tmp-root* (expand-file-name "~/.emacsrc/tmp"))
 
+(defun relative-mode-path (path)
+  (concat *mode-root* path))
+
 (defun add-mode-path (path)
   "Add a mode in the modes file to the root path"
-    (add-to-list 'load-path (concat *mode-root* path)))
+    (add-to-list 'load-path (relative-mode-path path)))
 
 (defun startup-after-init ()
   (add-to-list 'load-path (expand-file-name "~/.emacsrc/lib"))
@@ -57,7 +60,6 @@
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
  '(coffee-tab-width 2)
- '(custom-enabled-themes (quote (solarized-light)))
  '(custom-safe-themes
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "3b24f986084001ae46aa29ca791d2bc7f005c5c939646d2b800143526ab4d323" "a2e7b508533d46b701ad3b055e7c708323fb110b6676a8be458a758dd8f24e27" "d30a78ecaf43c9816c328d4361b3ca21bafb49c6dee4da680997bd98b9e07787" "357d5abe6f693f2875bb3113f5c031b7031f21717e8078f90d9d9bc3a14bcbd8" "0022e0b80aaf697a4dc41322d5270aff5c4dae342c09a559abb91fd2bc64e755" "55d31108a7dc4a268a1432cd60a7558824223684afecefa6fae327212c40f8d3" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
