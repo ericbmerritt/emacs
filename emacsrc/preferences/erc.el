@@ -34,4 +34,6 @@
 
 (setq erc-auto-reconnect t)
 
- (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))
+
+(add-to-list 'erc-modules 'notifications)

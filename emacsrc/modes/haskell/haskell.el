@@ -1,0 +1,1 @@
+(setq subword-mode t)

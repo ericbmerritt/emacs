@@ -57,7 +57,7 @@
 
 ;;; Trailing Whitespace
 ;;;
-(setq-default show-trailing-whitespace nil)
+(setq-default show-trailing-whitespace t)
 
 ;;; End Trailing Whitespace
 
