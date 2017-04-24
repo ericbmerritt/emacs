@@ -18,6 +18,13 @@
 ;;;; directory.
 ;;;;
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (setq *mode-root* (expand-file-name "~/.emacsrc/modes"))
 (setq *tmp-root* (expand-file-name "~/.emacsrc/tmp"))
 
@@ -47,7 +54,7 @@
             (add-to-list 'load-path (expand-file-name local-dir))))
       (setq mode-dirs (cdr mode-dirs))))
 
-  (elisp-load-dir (expand-file-name "~/.emacsrc/start-files"))
+  (elisp-load-dir (expand-file-name "~/.emacsrc/modes"))
   (elisp-load-dir (expand-file-name "~/.emacsrc/preferences")))
 
 (add-hook 'after-init-hook #'startup-after-init)
@@ -80,3 +87,4 @@
  '(paren-face ((((class color)) (:foreground "gray51"))))
  '(projmake-errline ((t (:foreground "#dc322f" :bold t :slant normal))))
  '(projmake-warnline ((t (:foreground "orange" :bold t :slant normal)))))
+(put 'dired-find-alternate-file 'disabled nil)
