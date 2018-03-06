@@ -40,8 +40,7 @@
 ;disable backup
 (setq backup-inhibited t)
 (setq make-backup-files nil)
-;disable auto save
-(setq auto-save-default nil)
+(setq auto-save-visited-file-name t)
 
 (if window-system ;;; Win32 or X11 or Visual display et al...
     (progn

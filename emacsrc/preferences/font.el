@@ -1,4 +1,2 @@
-;; install with apt-get install ttf-inconsolata
-(push '(font . "Inconsolata") default-frame-alist)
-;(set-default-font
-; "-unknown-Inconsolata-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
+(set-face-attribute 'default nil :family "Consolas")
+(set-face-attribute 'default nil :height 165)

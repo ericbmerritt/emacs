@@ -17,13 +17,18 @@
   (setq *eshell-count* 0)
   (neshell))
 
-
 (setq eshell-rc-script "~/.eshellrc")
 
 ;;;
 ;;; Eshell stuff
 ;;;
 (when (fboundp 'eshell)
+
+  (with-eval-after-load "esh-opt"
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda))
+
   ;; This and rmb are my two vices. rmb is defined as an eshell alias.
   (defalias 'eshell/lo #'eshell/exit)
 
@@ -49,8 +54,8 @@
                     (eshell-flatten-list (reverse args))))))
 
 
-  (defalias 'eshell/emacsclient #'eshell/emacs))
-
+  (defalias 'eshell/emacsclient #'eshell/emacs)
+  (defalias 'eshell/edit #'eshell/emacs))
 
 
 ;;; End eshell stuff
